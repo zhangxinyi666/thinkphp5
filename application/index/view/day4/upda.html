@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改</title>
+</head>
+<body>
+<center>
+    <form action="__URL__/upda_do" method="post">
+        <table>
+            <tr>
+                <td>账号：<input type="hidden" value="{$data['u_id']}" name="u_id"></td>
+                <td><input type="text" value="{$data['u_name']}" name="u_name"></td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td><input type="password" value="{$data['u_name']}" name="u_pwd"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" value="修改"></td>
+            </tr>
+        </table>
+    </form>
+</center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>哈哈哈</title>
+</head>
+<body>
+<center>
+    <table border="1">
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>PWD</td>
+            <td>操作</td>
+        </tr>
+        {volist name="data" id="v"}
+        <tr>
+            <td>{$v.u_id}</td>
+            <td>{$v.u_name}</td>
+            <td>{$v.u_pwd}</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        {/volist}
+
+    </table>
+</center>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示数据</title>
+</head>
+<style>
+    li{
+        float: left;
+        list-style: none;
+    }
+</style>
+<body>
+<center>
+    <table style="text-align: center" border="1">
+        <tr>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>PWD</td>
+            <td>IMG</td>
+            <td>操作</td>
+        </tr>
+        {volist name="data" id="vo"}
+        <tr>
+            <td>{$vo.u_id}</td>
+            <td>{$vo.u_name}</td>
+            <td>{$vo.u_pwd}</td>
+            <td><img src="__ROOT__/{$vo.u_img}" width="100px"></td>
+            <td>
+                <a href="__URL__/upda?u_id={$vo.u_id}">修改</a>|
+                <a href="__URL__/del?u_id={$vo.u_id}">删除</a>
+            </td>
+        </tr>
+        {/volist}
+        <tr>
+            <td colspan="5">{$page}</td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
